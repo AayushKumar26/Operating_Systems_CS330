@@ -1,0 +1,69 @@
+Part1
+------
+
+Q1. Observe the PCB address of the processes for the provided test case #1. Compare that to any of the addresses in the user space and note down the differences.
+Ans.    PCB address: 0x20862C0
+	Address in user spcae: 0x7FFFFFB94
+	The address of the PCB and form the user space are quite far apart. This is because the PCB address exists in the kernel space, whose memory space is far from the user space (this is doen to avoid	    memory interference).
+	
+
+Q2. Observe the output for the provided testcase#3 and match the child-parent relationship with the code logic.
+Ans.
+	The output is:
+pid 2 ppid 1 pcb@0x2086580 name init
+pid 1 ppid 0 pcb@0x20862C0 name init
+pid 3 ppid 1 pcb@0x2086840 name init
+pid 1 ppid 0 pcb@0x20862C0 name init
+
+	The while loop has 2 iterations, each iteration has a fork() call. At the first fork() call, the parent (with pid=1) is made to sleep for 3 seconds, so the first child gets executed first (this)
+	child has pid=2, so it prints pid 2 ppid 2) then sleeps for 10 seconds, now the parent completes the first iteration of the while loop and prints pid=1 ppid=0, then child exits. In the second  
+	iteration of the while loop, simlar process happens, parent sleeps for 3 seconds, new child prints pid=3 ppid=1, then parent again prints pid=1 ppid=0 then child exits.
+
+Part 2
+------
+Q1. Observe the output for the provided testcase #4. How many FDs correspond to pipes and what are their access permissions?
+Ans.
+	Output:
+file_type stdin mode 0x1 refcount 1 filepos 0
+file_type stdout mode 0x2 refcount 1 filepos 0
+file_type stderr mode 0x2 refcount 1 filepos 0
+file_type pipe mode 0x1 refcount 1 filepos 0
+file_type pipe mode 0x2 refcount 1 filepos 0
+
+ 	There are 2 FDs that correspond to pipes, one with access permission read (mode 0x1 -> READ MODE) and one with access permission write (mode 0x2 -> WRITE MODE). 
+
+
+Part 3
+-----
+Q1. Observe the stack segment information for testcase#2 and reason about it.
+Ans.
+	Output:
+code: [0x100000000 - 0x13FFFFFFF] next_free: 0x100008000 perm: R_X
+rodata: [0x140000000 - 0x17FFFFFFF] next_free: 0x140000000 perm: R__
+data: [0x180000000 - 0x1801FFFFF] next_free: 0x180001000 perm: RW_
+stack: [0x7FF000000 - 0x800000000] next_free: 0x7FFFFF000 perm: RW_
+After expanding RW data and stack
+code: [0x100000000 - 0x13FFFFFFF] next_free: 0x100008000 perm: R_X
+rodata: [0x140000000 - 0x17FFFFFFF] next_free: 0x140000000 perm: R__
+data: [0x180000000 - 0x1801FFFFF] next_free: 0x180001000 perm: RW_
+stack: [0x7FF000000 - 0x800000000] next_free: 0x7FFFFD000 perm: RW_
+
+	We can observe that the stack expands by 2 pages(the next_free decrease from 0x7FFFFF000 to 0x7FFFFD000). This happens because, when we dereference an address in the stack that has not yet 
+	been allocated in the memory, then the OS will automatically expand the stack to prevent a seg fault from occuring. (Note: we verified that this is not caused by the expand() call by commenting 
+	that line and running the program. Also, without the dereferencing statement, the stack expands by only 1 page, perhaps for the print statement and such.)
+
+
+Part 4
+------
+Q1. Why is the number of VM areas less than the number of mmap calls for testcase#4? 
+Ans. 
+	If two or more mmap calls allocate areas that are both contiguous and have the same permissions, then they can be merged into a single virtual memory. Since all 4 mmap calls in testcase 4 have 
+	the same read/write permissions, they can be merged into a single virtual memory area, thus the number of VM areas is only 1 evne though there are 4 mmap calls.
+
+
+Q2. Why it is not so for testcase #3.
+Ans.
+	In testcase 3, there are no 2 contiguous mmap calls that have the same permissions meaning not 2 mmap calls can be merged, thus 4 different VM areas are created, one for each mmap call. Thus,
+	number of VM areas in testcase 3 is 4 (and 3 after the munmap call).
+
+

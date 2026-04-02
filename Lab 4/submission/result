@@ -1,0 +1,45 @@
+Stage 1: Performing sanity checking
+Stage 2: Performing Evaluation
+
+
+***** Q1 *****
+Test passed
+Passed 1/1 testcases
+Marks obtained: 20/20
+
+
+***** Q2 *****
+2097152
+Test case 1 passed
+32768
+Test case 2 passed
+8388608
+Test case 3 passed
+131072
+Test case 4 passed
+4096
+Test case 5 passed
+16384
+Test case 6 passed
+262144
+Test case 7 passed
+16384
+Test case 8 passed
+0
+Test case 9 passed
+262144
+Test case 10 passed
+Passed 10/10 testcases
+Marks obtained: 40/40
+
+
+***** Q3 *****
+Test case 1 passed
+Test case 2 passed
+Passed 2/2 testcases
+Marks obtained: 40/40
+
+------------------------------------------------
+Total Marks obtained: 100/100
+------------------------------------------------
+8f46c9724ea997c4b58afa94462bd444  result

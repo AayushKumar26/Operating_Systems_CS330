@@ -1,0 +1,5 @@
+Testcase: 1 numP: 2 Expected: 41538 Output: 41538 Serial Time: 173315 Parallel Time:109193
+Testcase: 2 numP: 4 Expected: 41538 Output: 41538 Serial Time: 174457 Parallel Time:58859
+Testcase: 3 numP: 8 Expected: 41538 Output: 41538 Serial Time: 173147 Parallel Time:43763
+Testcase: 4 numP: 4 Expected: 348513 Output: 348513 Serial Time: 4182216 Parallel Time:1456680
+Testcase: 5 numP: 8 Expected: 348513 Output: 348513 Serial Time: 4177375 Parallel Time:894517

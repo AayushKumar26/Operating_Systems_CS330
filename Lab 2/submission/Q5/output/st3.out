@@ -1,0 +1,457 @@
+1680  execve("./encdrv", ["./encdrv", "testcases/testcase.3", "output/output.3"], 0x7ffe4ceff758 /* 18 vars */) = 0
+1680  brk(NULL)                         = 0x5e4e92703000
+1680  arch_prctl(0x3001 /* ARCH_??? */, 0x7ffd62ed0120) = -1 EINVAL (Invalid argument)
+1680  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7a5b17b3d000
+1680  access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+1680  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+1680  newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=29392, ...}, AT_EMPTY_PATH) = 0
+1680  mmap(NULL, 29392, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7a5b17b35000
+1680  close(3)                          = 0
+1680  openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+1680  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+1680  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+1680  pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+1680  pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\325\31p\226\367\t\200\30)\261\30\257\33|\366c"..., 68, 896) = 68
+1680  newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+1680  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+1680  mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7a5b1790c000
+1680  mprotect(0x7a5b17934000, 2023424, PROT_NONE) = 0
+1680  mmap(0x7a5b17934000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7a5b17934000
+1680  mmap(0x7a5b17ac9000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7a5b17ac9000
+1680  mmap(0x7a5b17b22000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7a5b17b22000
+1680  mmap(0x7a5b17b28000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7a5b17b28000
+1680  close(3)                          = 0
+1680  mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7a5b17909000
+1680  arch_prctl(ARCH_SET_FS, 0x7a5b17909740) = 0
+1680  set_tid_address(0x7a5b17909a10)   = 1680
+1680  set_robust_list(0x7a5b17909a20, 24) = 0
+1680  rseq(0x7a5b1790a0e0, 0x20, 0, 0x53053053) = 0
+1680  mprotect(0x7a5b17b22000, 16384, PROT_READ) = 0
+1680  mprotect(0x5e4e6cb69000, 4096, PROT_READ) = 0
+1680  mprotect(0x7a5b17b77000, 8192, PROT_READ) = 0
+1680  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+1680  munmap(0x7a5b17b35000, 29392)     = 0
+1680  openat(AT_FDCWD, "testcases/testcase.3", O_RDONLY) = 3
+1680  openat(AT_FDCWD, "output/output.3", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 4
+1680  pipe2([5, 6], 0)                  = 0
+1680  pipe2([7, 8], 0)                  = 0
+1680  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7a5b17909a10) = 1681
+1680  close(5)                          = 0
+1680  close(8)                          = 0
+1681  set_robust_list(0x7a5b17909a20, 24 <unfinished ...>
+1680  getrandom( <unfinished ...>
+1681  <... set_robust_list resumed>)    = 0
+1680  <... getrandom resumed>"\xcf\x14\x3c\x28\xcc\xc0\x71\xbe", 8, GRND_NONBLOCK) = 8
+1680  brk(NULL <unfinished ...>
+1681  dup2(5, 0 <unfinished ...>
+1680  <... brk resumed>)                = 0x5e4e92703000
+1681  <... dup2 resumed>)               = 0
+1680  brk(0x5e4e92724000 <unfinished ...>
+1681  dup2(8, 1 <unfinished ...>
+1680  <... brk resumed>)                = 0x5e4e92724000
+1681  <... dup2 resumed>)               = 1
+1680  read(3,  <unfinished ...>
+1681  close(5 <unfinished ...>
+1680  <... read resumed>"#include<stdio.h>\n#include<stdli"..., 1000) = 908
+1681  <... close resumed>)              = 0
+1681  close(6 <unfinished ...>
+1680  write(6, "18\n", 3 <unfinished ...>
+1681  <... close resumed>)              = 0
+1680  <... write resumed>)              = 3
+1681  close(7 <unfinished ...>
+1680  write(6, "#include<stdio.h>\n", 18 <unfinished ...>
+1681  <... close resumed>)              = 0
+1680  <... write resumed>)              = 18
+1681  close(8 <unfinished ...>
+1680  write(6, "19\n", 3 <unfinished ...>
+1681  <... close resumed>)              = 0
+1680  <... write resumed>)              = 3
+1681  execve("./encrypt", ["encrypt"], 0x7ffd62ed0308 /* 18 vars */ <unfinished ...>
+1680  write(6, "#include<stdlib.h>\n", 19) = 19
+1680  write(6, "19\n", 3)               = 3
+1680  write(6, "#include<assert.h>\n", 19) = 19
+1680  write(6, "1\n", 2)                = 2
+1680  write(6, "\n", 1)                 = 1
+1680  write(6, "31\n", 3)               = 3
+1680  write(6, "#define MAX_CHARS_IN_LINE 5000\n", 31) = 31
+1680  write(6, "1\n", 2 <unfinished ...>
+1681  <... execve resumed>)             = 0
+1680  <... write resumed>)              = 2
+1680  write(6, "\n", 1)                 = 1
+1681  brk(NULL <unfinished ...>
+1680  write(6, "23\n", 3 <unfinished ...>
+1681  <... brk resumed>)                = 0x5fc23e458000
+1680  <... write resumed>)              = 3
+1680  write(6, "int get_len(FILE *fpt)\n", 23 <unfinished ...>
+1681  arch_prctl(0x3001 /* ARCH_??? */, 0x7fff7327a220 <unfinished ...>
+1680  <... write resumed>)              = 23
+1681  <... arch_prctl resumed>)         = -1 EINVAL (Invalid argument)
+1680  write(6, "2\n", 2)                = 2
+1681  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+1680  write(6, "{\n", 2 <unfinished ...>
+1681  <... mmap resumed>)               = 0x708938c19000
+1680  <... write resumed>)              = 2
+1680  write(6, "17\n", 3 <unfinished ...>
+1681  access("/etc/ld.so.preload", R_OK <unfinished ...>
+1680  <... write resumed>)              = 3
+1681  <... access resumed>)             = -1 ENOENT (No such file or directory)
+1680  write(6, "   char buf[32];\n", 17 <unfinished ...>
+1681  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+1680  <... write resumed>)              = 17
+1680  write(6, "19\n", 3 <unfinished ...>
+1681  <... openat resumed>)             = 5
+1680  <... write resumed>)              = 3
+1681  newfstatat(5, "",  <unfinished ...>
+1680  write(6, "   int ctr = 0;   \n", 19 <unfinished ...>
+1681  <... newfstatat resumed>{st_mode=S_IFREG|0644, st_size=29392, ...}, AT_EMPTY_PATH) = 0
+1680  <... write resumed>)              = 19
+1681  mmap(NULL, 29392, PROT_READ, MAP_PRIVATE, 5, 0 <unfinished ...>
+1680  write(6, "22\n", 3 <unfinished ...>
+1681  <... mmap resumed>)               = 0x708938c11000
+1680  <... write resumed>)              = 3
+1681  close(5 <unfinished ...>
+1680  write(6, "   while(!feof(fpt)){\n", 22 <unfinished ...>
+1681  <... close resumed>)              = 0
+1680  <... write resumed>)              = 22
+1680  write(6, "25\n", 3 <unfinished ...>
+1681  openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+1680  <... write resumed>)              = 3
+1680  write(6, "\t   int ch = fgetc(fpt);\n", 25 <unfinished ...>
+1681  <... openat resumed>)             = 5
+1680  <... write resumed>)              = 25
+1681  read(5,  <unfinished ...>
+1680  write(6, "18\n", 3 <unfinished ...>
+1681  <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+1680  <... write resumed>)              = 3
+1681  pread64(5,  <unfinished ...>
+1680  write(6, "\t   if(feof(fpt))\n", 18 <unfinished ...>
+1681  <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+1680  <... write resumed>)              = 18
+1681  pread64(5,  <unfinished ...>
+1680  write(6, "12\n", 3 <unfinished ...>
+1681  <... pread64 resumed>"\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+1680  <... write resumed>)              = 3
+1681  pread64(5,  <unfinished ...>
+1680  write(6, "\t\t exit(0);\n", 12 <unfinished ...>
+1681  <... pread64 resumed>"\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\325\31p\226\367\t\200\30)\261\30\257\33|\366c"..., 68, 896) = 68
+1680  <... write resumed>)              = 12
+1681  newfstatat(5, "",  <unfinished ...>
+1680  write(6, "20\n", 3 <unfinished ...>
+1681  <... newfstatat resumed>{st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+1680  <... write resumed>)              = 3
+1681  pread64(5,  <unfinished ...>
+1680  write(6, "\t   if(ch == '\\n'){\n", 20 <unfinished ...>
+1681  <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+1680  <... write resumed>)              = 20
+1681  mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 5, 0 <unfinished ...>
+1680  write(6, "16\n", 3 <unfinished ...>
+1681  <... mmap resumed>)               = 0x7089389e8000
+1680  <... write resumed>)              = 3
+1681  mprotect(0x708938a10000, 2023424, PROT_NONE <unfinished ...>
+1680  write(6, "\t\tbuf[ctr] = 0;\n", 16 <unfinished ...>
+1681  <... mprotect resumed>)           = 0
+1680  <... write resumed>)              = 16
+1681  mmap(0x708938a10000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x28000 <unfinished ...>
+1680  write(6, "20\n", 3)               = 3
+1681  <... mmap resumed>)               = 0x708938a10000
+1680  write(6, "\t\treturn atoi(buf);\n", 20 <unfinished ...>
+1681  mmap(0x708938ba5000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x1bd000 <unfinished ...>
+1680  <... write resumed>)              = 20
+1680  write(6, "6\n", 2 <unfinished ...>
+1681  <... mmap resumed>)               = 0x708938ba5000
+1680  <... write resumed>)              = 2
+1681  mmap(0x708938bfe000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x215000 <unfinished ...>
+1680  write(6, "\t   }\n", 6)           = 6
+1680  write(6, "19\n", 3 <unfinished ...>
+1681  <... mmap resumed>)               = 0x708938bfe000
+1680  <... write resumed>)              = 3
+1681  mmap(0x708938c04000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+1680  write(6, "\t   buf[ctr] = ch;\n", 19) = 19
+1681  <... mmap resumed>)               = 0x708938c04000
+1680  write(6, "11\n", 3)               = 3
+1681  close(5 <unfinished ...>
+1680  write(6, "\t   ++ctr;\n", 11 <unfinished ...>
+1681  <... close resumed>)              = 0
+1680  <... write resumed>)              = 11
+1680  write(6, "18\n", 3 <unfinished ...>
+1681  mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+1680  <... write resumed>)              = 3
+1681  <... mmap resumed>)               = 0x7089389e5000
+1680  write(6, "\t   if(ctr >= 10)\n", 18 <unfinished ...>
+1681  arch_prctl(ARCH_SET_FS, 0x7089389e5740 <unfinished ...>
+1680  <... write resumed>)              = 18
+1681  <... arch_prctl resumed>)         = 0
+1680  write(6, "16\n", 3 <unfinished ...>
+1681  set_tid_address(0x7089389e5a10 <unfinished ...>
+1680  <... write resumed>)              = 3
+1681  <... set_tid_address resumed>)    = 1681
+1680  write(6, "\t\t   return -1;\n", 16 <unfinished ...>
+1681  set_robust_list(0x7089389e5a20, 24 <unfinished ...>
+1680  <... write resumed>)              = 16
+1681  <... set_robust_list resumed>)    = 0
+1680  write(6, "9\n", 2 <unfinished ...>
+1681  rseq(0x7089389e60e0, 0x20, 0, 0x53053053 <unfinished ...>
+1680  <... write resumed>)              = 2
+1681  <... rseq resumed>)               = 0
+1680  write(6, "   }\t   \n", 9)        = 9
+1680  write(6, "17\n", 3)               = 3
+1681  mprotect(0x708938bfe000, 16384, PROT_READ <unfinished ...>
+1680  write(6, "   if(feof(fpt))\n", 17 <unfinished ...>
+1681  <... mprotect resumed>)           = 0
+1680  <... write resumed>)              = 17
+1680  write(6, "13\n", 3 <unfinished ...>
+1681  mprotect(0x5fc20578b000, 4096, PROT_READ <unfinished ...>
+1680  <... write resumed>)              = 3
+1681  <... mprotect resumed>)           = 0
+1680  write(6, "\t   exit(0);\n", 13 <unfinished ...>
+1681  mprotect(0x708938c53000, 8192, PROT_READ <unfinished ...>
+1680  <... write resumed>)              = 13
+1680  write(6, "21\n", 3 <unfinished ...>
+1681  <... mprotect resumed>)           = 0
+1680  <... write resumed>)              = 3
+1680  write(6, "   return atoi(buf);\n", 21 <unfinished ...>
+1681  prlimit64(0, RLIMIT_STACK, NULL,  <unfinished ...>
+1680  <... write resumed>)              = 21
+1681  <... prlimit64 resumed>{rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+1680  write(6, "2\n", 2)                = 2
+1681  munmap(0x708938c11000, 29392 <unfinished ...>
+1680  write(6, "}\n", 2)                = 2
+1681  <... munmap resumed>)             = 0
+1680  write(6, "15\n", 3)               = 3
+1681  newfstatat(0, "",  <unfinished ...>
+1680  write(6, "int main(void)\n", 15 <unfinished ...>
+1681  <... newfstatat resumed>{st_mode=S_IFIFO|0600, st_size=0, ...}, AT_EMPTY_PATH) = 0
+1680  <... write resumed>)              = 15
+1681  getrandom( <unfinished ...>
+1680  write(6, "2\n", 2 <unfinished ...>
+1681  <... getrandom resumed>"\xba\x2d\x93\x7a\x71\x41\xf8\x43", 8, GRND_NONBLOCK) = 8
+1680  <... write resumed>)              = 2
+1681  brk(NULL <unfinished ...>
+1680  write(6, "{\n", 2 <unfinished ...>
+1681  <... brk resumed>)                = 0x5fc23e458000
+1680  <... write resumed>)              = 2
+1681  brk(0x5fc23e479000 <unfinished ...>
+1680  write(6, "18\n", 3 <unfinished ...>
+1681  <... brk resumed>)                = 0x5fc23e479000
+1680  <... write resumed>)              = 3
+1680  write(6, "   int num_chars;\n", 18 <unfinished ...>
+1681  read(0,  <unfinished ...>
+1680  <... write resumed>)              = 18
+1681  <... read resumed>"18\n#include<stdio.h>\n19\n#include"..., 4096) = 533
+1680  write(6, "33\n", 3)               = 3
+1680  write(6, "   char line[MAX_CHARS_IN_LINE];"..., 33 <unfinished ...>
+1681  newfstatat(1, "",  <unfinished ...>
+1680  <... write resumed>)              = 33
+1681  <... newfstatat resumed>{st_mode=S_IFIFO|0600, st_size=0, ...}, AT_EMPTY_PATH) = 0
+1680  write(6, "1\n", 2 <unfinished ...>
+1681  write(1, "18\n1{|q~gvw.afv{}<z,\30", 21 <unfinished ...>
+1680  <... write resumed>)              = 2
+1681  <... write resumed>)              = 21
+1680  write(6, "\n", 1 <unfinished ...>
+1681  write(1, "19\n0z}p\177fwv/`gw\177zq={-\31", 22 <unfinished ...>
+1680  <... write resumed>)              = 1
+1681  <... write resumed>)              = 22
+1680  write(6, "13\n", 3 <unfinished ...>
+1681  write(1, "19\n0z}p\177fwv/r``vag={-\31", 22 <unfinished ...>
+1680  <... write resumed>)              = 3
+1681  <... write resumed>)              = 22
+1680  write(6, "   while(1){\n", 13 <unfinished ...>
+1681  write(1, "1\n\v", 3 <unfinished ...>
+1680  <... write resumed>)              = 13
+1681  <... write resumed>)              = 3
+1680  write(6, "35\n", 3 <unfinished ...>
+1681  write(1, "31\n<{zyvqz?R^G@\\W^ML@VQ@SVQZ?*//"..., 34 <unfinished ...>
+1680  <... write resumed>)              = 3
+1681  <... write resumed>)              = 34
+1680  write(6, "       num_chars = get_len(stdin"..., 35 <unfinished ...>
+1681  write(1, "1\n\v", 3 <unfinished ...>
+1680  <... write resumed>)              = 35
+1681  <... write resumed>)              = 3
+1680  write(6, "58\n", 3 <unfinished ...>
+1681  write(1, "23\n~yc7prcH{ry?Q^[R7=qgc>\35", 26 <unfinished ...>
+1680  <... write resumed>)              = 3
+1681  <... write resumed>)              = 26
+1680  write(6, "       if(num_chars < 0 || num_c"..., 58 <unfinished ...>
+1681  write(1, "2\ny\10", 4 <unfinished ...>
+1680  <... write resumed>)              = 58
+1681  <... write resumed>)              = 4
+1680  write(6, "18\n", 3 <unfinished ...>
+1681  write(1, "17\n111rypc1sdwJ\"#L*\33", 20 <unfinished ...>
+1680  <... write resumed>)              = 3
+1681  <... write resumed>)              = 20
+1680  write(6, "\t      return -1;\n", 18 <unfinished ...>
+1681  write(1, "19\n333z}g3pga3.3#(333\31", 22 <unfinished ...>
+1680  <... write resumed>)              = 18
+1681  <... write resumed>)              = 22
+1680  write(6, "55\n", 3 <unfinished ...>
+1681  write(1, "22\n666a~\177zs>7psyp>pfb??m\34", 25 <unfinished ...>
+1680  <... write resumed>)              = 3
+1681  <... write resumed>)              = 25
+1680  write(6, "       //fprintf(stderr, \"num ch"..., 55 <unfinished ...>
+1681  write(1, "25\n\20999pwm9zq9$9\177~|mz1\177im0\"\23", 28 <unfinished ...>
+1680  <... write resumed>)              = 55
+1681  <... write resumed>)              = 28
+1680  write(6, "34\n", 3 <unfinished ...>
+1681  write(1, "18\n\033222{t:tw}t:tbf;;\30", 21 <unfinished ...>
+1680  <... write resumed>)              = 3
+1681  <... write resumed>)              = 21
+1680  write(6, "       printf(\"%d\\n\", num_chars)"..., 34 <unfinished ...>
+1681  write(1, "12\n\5\5,itex$<%7\6", 15 <unfinished ...>
+1680  <... write resumed>)              = 34
+1681  <... write resumed>)              = 15
+1680  write(6, "1\n", 2 <unfinished ...>
+1681  write(1, "20\n\035444}r<w|4))43Hz3=o\36", 23 <unfinished ...>
+1680  <... write resumed>)              = 2
+1681  <... write resumed>)              = 23
+1680  write(6, "\n", 1 <unfinished ...>
+1681  write(1, "16\n\31\31revKsdbM0-0 +\32", 19 <unfinished ...>
+1680  <... write resumed>)              = 1
+1681  <... write resumed>)              = 19
+1680  write(6, "57\n", 3 <unfinished ...>
+1681  write(1, "20\n\35\35fq`afz4u`{}<var=/\36", 23 <unfinished ...>
+1680  <... write resumed>)              = 3
+1681  <... write resumed>)              = 23
+1680  write(6, "       if(fread(line, 1, num_cha"..., 57 <unfinished ...>
+1681  write(1, "6\n\17&&&{\f", 8 <unfinished ...>
+1680  <... write resumed>)              = 57
+1681  <... write resumed>)              = 8
+1680  write(6, "18\n", 3 <unfinished ...>
+1681  write(1, "19\n\032333qfuHpgaN3.3p{(\31", 22 <unfinished ...>
+1680  <... write resumed>)              = 3
+1681  <... write resumed>)              = 22
+1680  write(6, "\t       return 0;\n", 18 <unfinished ...>
+1681  write(1, "11\n\2+++  h\177y0\1", 14 <unfinished ...>
+1680  <... write resumed>)              = 18
+1681  <... write resumed>)              = 14
+1680  write(6, "39\n", 3 <unfinished ...>
+1681  write(1, "18\n\033222{t:qf`2,/2#\";\30", 21 <unfinished ...>
+1680  <... write resumed>)              = 3
+1681  <... write resumed>)              = 21
+1680  write(6, "       for(int i=0; i<num_chars;"..., 39 <unfinished ...>
+1681  write(1, "16\n\31\031000budeb~0=!+\32", 19 <unfinished ...>
+1680  <... write resumed>)              = 39
+1681  <... write resumed>)              = 19
+1680  write(6, "42\n", 3 <unfinished ...>
+1681  write(1, "9\n)))t\0)))\3", 11 <unfinished ...>
+1680  <... write resumed>)              = 3
+1681  <... write resumed>)              = 11
+1680  write(6, "\t     putchar(line[i] ^ (num_cha"..., 42 <unfinished ...>
+1681  write(1, "17\n111xw9wt~w9wae88\33", 20 <unfinished ...>
+1680  <... write resumed>)              = 42
+1681  <... write resumed>)              = 20
+1680  write(6, "9\n", 2 <unfinished ...>
+1681  write(1, "13\n\4---hudy%=$6\7", 16 <unfinished ...>
+1680  <... write resumed>)              = 2
+1681  <... write resumed>)              = 16
+1680  write(6, "       }\n", 9 <unfinished ...>
+1681  write(1, "21\n555gpa`g{5taz|=w`s<.\37", 24 <unfinished ...>
+1680  <... write resumed>)              = 9
+1681  <... write resumed>)              = 24
+1680  write(6, "23\n", 3 <unfinished ...>
+1681  write(1, "2\n\177\10", 4 <unfinished ...>
+1680  <... write resumed>)              = 3
+1681  <... write resumed>)              = 4
+1680  write(6, "       fflush(stdout);\n", 23 <unfinished ...>
+1681  write(1, "15\nfa{/bnfa'y`fk&\5", 18 <unfinished ...>
+1680  <... write resumed>)              = 23
+1681  <... write resumed>)              = 18
+1680  write(6, "5\n", 2 <unfinished ...>
+1681  write(1, "2\ny\10", 4 <unfinished ...>
+1680  <... write resumed>)              = 2
+1681  <... write resumed>)              = 4
+1680  write(6, "   }\n", 5 <unfinished ...>
+1681  write(1, "18\n222{|f2|g\177Mqzs`a)\30", 21 <unfinished ...>
+1680  <... write resumed>)              = 5
+1681  <... write resumed>)              = 21
+1680  write(6, "15\n", 3 <unfinished ...>
+1681  read(0,  <unfinished ...>
+1680  <... write resumed>)              = 3
+1681  <... read resumed>"33\n   char line[MAX_CHARS_IN_LIN"..., 4096) = 488
+1680  write(6, "   return 0;  \n", 15 <unfinished ...>
+1681  write(1, "33\n\1\1\1BI@S\1MHODzl`y~bi`sr~ho~mho"..., 36 <unfinished ...>
+1680  <... write resumed>)              = 15
+1681  <... write resumed>)              = 36
+1680  write(6, "2\n", 2 <unfinished ...>
+1681  write(1, "1\n\v", 3 <unfinished ...>
+1680  <... write resumed>)              = 2
+1681  <... write resumed>)              = 3
+1680  write(6, "}\n", 2 <unfinished ...>
+1681  write(1, "13\n---zedah%<$v\7", 16 <unfinished ...>
+1680  <... write resumed>)              = 2
+1681  <... write resumed>)              = 16
+1680  read(3,  <unfinished ...>
+1681  write(1, "35\n\3\3\3\3\3\3\3MVN|@KBQP\3\36\3DFW|OFM\vPW"..., 38 <unfinished ...>
+1680  <... read resumed>"", 1000)       = 0
+1681  <... write resumed>)              = 38
+1680  close(6 <unfinished ...>
+1681  write(1, "58\n\32\32\32\32\32\32\32S\\\22TOWeYR[HI\32\6\32\n\32FF\32TO"..., 61 <unfinished ...>
+1680  <... close resumed>)              = 0
+1681  <... write resumed>)              = 61
+1680  close(3 <unfinished ...>
+1681  write(1, "18\n\033222222`wfg`|2?#)\30", 21 <unfinished ...>
+1680  <... close resumed>)              = 0
+1681  <... write resumed>)              = 21
+1680  read(7,  <unfinished ...>
+1681  write(1, "55\n\27\27\27\27\27\27\27\30\30QGE^YCQ\37DCSREE\33\27\25YBZ"..., 58 <unfinished ...>
+1680  <... read resumed>"18\n1{|q~gvw.afv{}<z,\03019\n0z}p\177fwv"..., 1000) = 708
+1681  <... write resumed>)              = 58
+1680  write(4, "18\n1{|q~gvw.afv{}<z,\03019\n0z}p\177fwv"..., 708 <unfinished ...>
+1681  write(1, "34\n\2\2\2\2\2\2\2RPKLVD\n\0\7F~L\0\16\2LWO}AJC"..., 37) = 37
+1681  write(1, "1\n\v", 3 <unfinished ...>
+1680  <... write resumed>)              = 708
+1681  <... write resumed>)              = 3
+1680  read(7,  <unfinished ...>
+1681  write(1, "57\n\31\31\31\31\31\31\31P_\21_K\\X]\21UPW\\\25\31\10\25\31WLTf"..., 60 <unfinished ...>
+1680  <... read resumed>"55\n\27\27\27\27\27\27\27\30\30QGE^YCQ\37DCSREE\33\27\25YBZ"..., 1000) = 98
+1681  <... write resumed>)              = 60
+1680  write(4, "55\n\27\27\27\27\27\27\27\30\30QGE^YCQ\37DCSREE\33\27\25YBZ"..., 98 <unfinished ...>
+1681  write(1, "18\n\0332222222`wfg`|2\")\30", 21 <unfinished ...>
+1680  <... write resumed>)              = 98
+1681  <... write resumed>)              = 21
+1680  read(7,  <unfinished ...>
+1681  write(1, "39\n\7\7\7\7\7\7\7AHU\17NIS\7N\32\27\34\7N\33IRJxDOF"..., 42 <unfinished ...>
+1680  <... read resumed>"57\n\31\31\31\31\31\31\31P_\21_K\\X]\21UPW\\\25\31\10\25\31WLTf"..., 1000) = 81
+1681  <... write resumed>)              = 42
+1680  write(4, "57\n\31\31\31\31\31\31\31P_\21_K\\X]\21UPW\\\25\31\10\25\31WLTf"..., 81 <unfinished ...>
+1681  write(1, "42\n#\n\n\n\n\nZ_^IBKX\2FCDOqCw\nt\n\2D_Gu"..., 45 <unfinished ...>
+1680  <... write resumed>)              = 81
+1681  <... write resumed>)              = 45
+1680  read(7,  <unfinished ...>
+1681  write(1, "9\n)))))))t\3", 11 <unfinished ...>
+1680  <... read resumed>"39\n\7\7\7\7\7\7\7AHU\17NIS\7N\32\27\34\7N\33IRJxDOF"..., 1000) = 87
+1681  <... write resumed>)              = 11
+1680  write(4, "39\n\7\7\7\7\7\7\7AHU\17NIS\7N\32\27\34\7N\33IRJxDOF"..., 87 <unfinished ...>
+1681  write(1, "23\n7777777qq{bd\177?dcsxbc>,\35", 26 <unfinished ...>
+1680  <... write resumed>)              = 87
+1681  <... write resumed>)              = 26
+1680  read(7,  <unfinished ...>
+1681  write(1, "5\n%%%x\17", 7 <unfinished ...>
+1680  <... read resumed>"9\n)))))))t\00323\n7777777qq{bd\177?dcsx"..., 1000) = 37
+1681  <... write resumed>)              = 7
+1680  write(4, "9\n)))))))t\00323\n7777777qq{bd\177?dcsx"..., 37 <unfinished ...>
+1681  read(0,  <unfinished ...>
+1680  <... write resumed>)              = 37
+1681  <... read resumed>"   return 0;  \n2\n}\n", 4096) = 19
+1680  read(7,  <unfinished ...>
+1681  write(1, "15\n///}j{z}a/?4//\5", 18 <unfinished ...>
+1680  <... read resumed>"5\n%%%x\17", 1000) = 7
+1681  <... write resumed>)              = 18
+1680  write(4, "5\n%%%x\17", 7 <unfinished ...>
+1681  write(1, "2\n\177\10", 4 <unfinished ...>
+1680  <... write resumed>)              = 7
+1681  <... write resumed>)              = 4
+1680  read(7,  <unfinished ...>
+1681  read(0,  <unfinished ...>
+1680  <... read resumed>"15\n///}j{z}a/?4//\0052\n\177\10", 1000) = 22
+1681  <... read resumed>"", 4096)       = 0
+1680  write(4, "15\n///}j{z}a/?4//\0052\n\177\10", 22 <unfinished ...>
+1681  exit_group(0 <unfinished ...>
+1680  <... write resumed>)              = 22
+1681  <... exit_group resumed>)         = ?
+1680  read(7, "", 1000)                 = 0
+1681  +++ exited with 0 +++
+1680  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1681, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+1680  close(4)                          = 0
+1680  close(7)                          = 0
+1680  exit_group(0)                     = ?
+1680  +++ exited with 0 +++

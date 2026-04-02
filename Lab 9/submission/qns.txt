@@ -1,0 +1,45 @@
+Part1
+-----
+
+Q1. In testcase1.c, how many times the swapper process got scheduled?
+Ans. One
+
+Q2. In testcase3.c, how many times the swapper process is scheduled and why?
+Ans. The swapper process is scheduled only one time because RR-list is empty as processes with pid =2,3,4 have finished and process with pid=1 is currently in sleep mode.
+
+Q3. In testcase5.c, how many times the sum value was less than 10 and why?    
+Ans. The sum value was less then 10 2 times. This is because, we will get sum less then 10 only on one condition (i=0 and sum=4) that happens only when the pid of the process is 4. A process of pid=4 
+gets scheduled twice, once when process 1 executes its 3rd fork, and once when process 5 executes its only fork (it will use pid=4 because jsut before process 5 was called, process 4 exited after printing
+sum=4).
+
+Part 2
+------
+
+Q1. In testcase1.c, in which level the page table entries for the two addresses
+for which walk_pt is called diverse and why?
+Ans. It is level 2 where the page table entries diverge because the first 9 bits are the same for both.
+
+
+Q2. In testcase2.c, reason about the page table entries at different levels for 
+(ptr+4096) across different invocation of walk_pt. Specifically, differentiate
+the entries w.r.t. the entries corresponding to (ptr)
+Ans.  Initially we are not allowed to enter both (lazy allocation, nothing has been placed there yet). Then when we put something in *ptr, it allocates only 1 page, so we can enter ptr all the way but not
+ptr+4096(can only go till L3). Then in last when we put something in *(ptr+4096) then only we could enter ptr+4096.
+
+
+Q3. Explain the gemOS physical memory allocation logic for the user stack
+    region by examining the o/p of testcase4.c.
+Ans.  initially, we can only enter p(as *p has been intialized) but not p-8192 (owing to lazy allocation). But when we initialize *(ptr-8192) it will allocate till ptr-8192, hence we can enter both 
+ptr-8192 and ptr-4096.
+
+
+Q4. In testcase5.c, the PFN used to maintain L4 page table for the two addresses
+    are same. (True/False) with justification.
+Ans. False, as the PFN of L3 is used to maintain L4 and they both are different.
+
+
+Q5. Which bit is used to maintain the `write' permission for a page? Justify. 
+Ans. 3rd last bit is used to maintain the 'write' permission for a page. We can observe this in test case 3, where the 2nd pointer ptr1 (that has write permission) differs in its flags of L4 in the 3rd 
+bit from the flag in L4 of ptr (have flags 0x19 without write and 0x11 with write).
+
+      

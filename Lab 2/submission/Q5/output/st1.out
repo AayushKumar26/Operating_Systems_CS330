@@ -1,0 +1,218 @@
+1663  execve("./encdrv", ["./encdrv", "testcases/testcase.1", "output/output.1"], 0x7ffcc84e3b78 /* 18 vars */) = 0
+1663  brk(NULL)                         = 0x63dc0dd1b000
+1663  arch_prctl(0x3001 /* ARCH_??? */, 0x7ffe08c084b0) = -1 EINVAL (Invalid argument)
+1663  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6cf1168000
+1663  access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+1663  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+1663  newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=29392, ...}, AT_EMPTY_PATH) = 0
+1663  mmap(NULL, 29392, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f6cf1160000
+1663  close(3)                          = 0
+1663  openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+1663  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+1663  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+1663  pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+1663  pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\325\31p\226\367\t\200\30)\261\30\257\33|\366c"..., 68, 896) = 68
+1663  newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+1663  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+1663  mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f6cf0f37000
+1663  mprotect(0x7f6cf0f5f000, 2023424, PROT_NONE) = 0
+1663  mmap(0x7f6cf0f5f000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f6cf0f5f000
+1663  mmap(0x7f6cf10f4000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7f6cf10f4000
+1663  mmap(0x7f6cf114d000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7f6cf114d000
+1663  mmap(0x7f6cf1153000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f6cf1153000
+1663  close(3)                          = 0
+1663  mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f6cf0f34000
+1663  arch_prctl(ARCH_SET_FS, 0x7f6cf0f34740) = 0
+1663  set_tid_address(0x7f6cf0f34a10)   = 1663
+1663  set_robust_list(0x7f6cf0f34a20, 24) = 0
+1663  rseq(0x7f6cf0f350e0, 0x20, 0, 0x53053053) = 0
+1663  mprotect(0x7f6cf114d000, 16384, PROT_READ) = 0
+1663  mprotect(0x63dbe79e0000, 4096, PROT_READ) = 0
+1663  mprotect(0x7f6cf11a2000, 8192, PROT_READ) = 0
+1663  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+1663  munmap(0x7f6cf1160000, 29392)     = 0
+1663  openat(AT_FDCWD, "testcases/testcase.1", O_RDONLY) = 3
+1663  openat(AT_FDCWD, "output/output.1", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 4
+1663  pipe2([5, 6], 0)                  = 0
+1663  pipe2([7, 8], 0)                  = 0
+1663  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f6cf0f34a10) = 1664
+1663  close(5)                          = 0
+1663  close(8)                          = 0
+1664  set_robust_list(0x7f6cf0f34a20, 24 <unfinished ...>
+1663  getrandom("\x9c\x71\x80\x63\x08\xb3\x68\xbc", 8, GRND_NONBLOCK) = 8
+1663  brk(NULL)                         = 0x63dc0dd1b000
+1664  <... set_robust_list resumed>)    = 0
+1663  brk(0x63dc0dd3c000)               = 0x63dc0dd3c000
+1663  read(3, "all: encdrv encrypt decrypt\n\nenc"..., 1000) = 196
+1664  dup2(5, 0)                        = 0
+1663  write(6, "28\n", 3 <unfinished ...>
+1664  dup2(8, 1 <unfinished ...>
+1663  <... write resumed>)              = 3
+1664  <... dup2 resumed>)               = 1
+1663  write(6, "all: encdrv encrypt decrypt\n", 28 <unfinished ...>
+1664  close(5 <unfinished ...>
+1663  <... write resumed>)              = 28
+1664  <... close resumed>)              = 0
+1663  write(6, "1\n", 2 <unfinished ...>
+1664  close(6 <unfinished ...>
+1663  <... write resumed>)              = 2
+1664  <... close resumed>)              = 0
+1663  write(6, "\n", 1 <unfinished ...>
+1664  close(7 <unfinished ...>
+1663  <... write resumed>)              = 1
+1664  <... close resumed>)              = 0
+1663  write(6, "18\n", 3 <unfinished ...>
+1664  close(8 <unfinished ...>
+1663  <... write resumed>)              = 3
+1664  <... close resumed>)              = 0
+1663  write(6, "encrypt:encrypt.c\n", 18 <unfinished ...>
+1664  execve("./encrypt", ["encrypt"], 0x7ffe08c08698 /* 18 vars */ <unfinished ...>
+1663  <... write resumed>)              = 18
+1663  write(6, "26\n", 3)               = 3
+1663  write(6, "\tgcc encrypt.c -o encrypt\n", 26) = 26
+1663  write(6, "1\n", 2)                = 2
+1663  write(6, "\n", 1)                 = 1
+1663  write(6, "18\n", 3)               = 3
+1663  write(6, "decrypt:decrypt.c\n", 18 <unfinished ...>
+1664  <... execve resumed>)             = 0
+1663  <... write resumed>)              = 18
+1663  write(6, "26\n", 3)               = 3
+1664  brk(NULL <unfinished ...>
+1663  write(6, "\tgcc decrypt.c -o decrypt\n", 26 <unfinished ...>
+1664  <... brk resumed>)                = 0x647c5d2ad000
+1663  <... write resumed>)              = 26
+1663  write(6, "1\n", 2 <unfinished ...>
+1664  arch_prctl(0x3001 /* ARCH_??? */, 0x7fffb6a2a680 <unfinished ...>
+1663  <... write resumed>)              = 2
+1664  <... arch_prctl resumed>)         = -1 EINVAL (Invalid argument)
+1663  write(6, "\n", 1)                 = 1
+1664  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+1663  write(6, "16\n", 3 <unfinished ...>
+1664  <... mmap resumed>)               = 0x776022267000
+1663  <... write resumed>)              = 3
+1663  write(6, "encdrv:encdrv.c\n", 16 <unfinished ...>
+1664  access("/etc/ld.so.preload", R_OK <unfinished ...>
+1663  <... write resumed>)              = 16
+1663  write(6, "24\n", 3 <unfinished ...>
+1664  <... access resumed>)             = -1 ENOENT (No such file or directory)
+1663  <... write resumed>)              = 3
+1664  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+1663  write(6, "\tgcc encdrv.c -o encdrv\n", 24 <unfinished ...>
+1664  <... openat resumed>)             = 5
+1663  <... write resumed>)              = 24
+1664  newfstatat(5, "",  <unfinished ...>
+1663  write(6, "7\n", 2 <unfinished ...>
+1664  <... newfstatat resumed>{st_mode=S_IFREG|0644, st_size=29392, ...}, AT_EMPTY_PATH) = 0
+1663  <... write resumed>)              = 2
+1664  mmap(NULL, 29392, PROT_READ, MAP_PRIVATE, 5, 0 <unfinished ...>
+1663  write(6, "clean:\n", 7 <unfinished ...>
+1664  <... mmap resumed>)               = 0x77602225f000
+1663  <... write resumed>)              = 7
+1664  close(5 <unfinished ...>
+1663  write(6, "30\n", 3 <unfinished ...>
+1664  <... close resumed>)              = 0
+1663  <... write resumed>)              = 3
+1663  write(6, "\trm -f encdrv encrypt decrypt\n", 30 <unfinished ...>
+1664  openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+1663  <... write resumed>)              = 30
+1663  read(3,  <unfinished ...>
+1664  <... openat resumed>)             = 5
+1663  <... read resumed>"", 1000)       = 0
+1664  read(5,  <unfinished ...>
+1663  close(6 <unfinished ...>
+1664  <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+1663  <... close resumed>)              = 0
+1664  pread64(5,  <unfinished ...>
+1663  close(3 <unfinished ...>
+1664  <... pread64 resumed>"\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+1663  <... close resumed>)              = 0
+1664  pread64(5,  <unfinished ...>
+1663  read(7,  <unfinished ...>
+1664  <... pread64 resumed>"\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+1664  pread64(5, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\325\31p\226\367\t\200\30)\261\30\257\33|\366c"..., 68, 896) = 68
+1664  newfstatat(5, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+1664  pread64(5, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+1664  mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 5, 0) = 0x776022036000
+1664  mprotect(0x77602205e000, 2023424, PROT_NONE) = 0
+1664  mmap(0x77602205e000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x28000) = 0x77602205e000
+1664  mmap(0x7760221f3000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x1bd000) = 0x7760221f3000
+1664  mmap(0x77602224c000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 5, 0x215000) = 0x77602224c000
+1664  mmap(0x776022252000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x776022252000
+1664  close(5)                          = 0
+1664  mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x776022033000
+1664  arch_prctl(ARCH_SET_FS, 0x776022033740) = 0
+1664  set_tid_address(0x776022033a10)   = 1664
+1664  set_robust_list(0x776022033a20, 24) = 0
+1664  rseq(0x7760220340e0, 0x20, 0, 0x53053053) = 0
+1664  mprotect(0x77602224c000, 16384, PROT_READ) = 0
+1664  mprotect(0x647c528f9000, 4096, PROT_READ) = 0
+1664  mprotect(0x7760222a1000, 8192, PROT_READ) = 0
+1664  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+1664  munmap(0x77602225f000, 29392)     = 0
+1664  newfstatat(0, "", {st_mode=S_IFIFO|0600, st_size=0, ...}, AT_EMPTY_PATH) = 0
+1664  getrandom("\x41\xb0\x85\x5d\xce\x7c\xbb\x82", 8, GRND_NONBLOCK) = 8
+1664  brk(NULL)                         = 0x647c5d2ad000
+1664  brk(0x647c5d2ce000)               = 0x647c5d2ce000
+1664  read(0, "28\nall: encdrv encrypt decrypt\n1"..., 4096) = 228
+1664  newfstatat(1, "", {st_mode=S_IFIFO|0600, st_size=0, ...}, AT_EMPTY_PATH) = 0
+1664  write(1, "28\n}pp&<yr\177xnj<yr\177nelh<xy\177nelh\26", 31 <unfinished ...>
+1663  <... read resumed>"28\n}pp&<yr\177xnj<yr\177nelh<xy\177nelh\26", 1000) = 31
+1664  <... write resumed>)              = 31
+1663  write(4, "28\n}pp&<yr\177xnj<yr\177nelh<xy\177nelh\26", 31 <unfinished ...>
+1664  write(1, "1\n\v", 3)              = 3
+1663  <... write resumed>)              = 31
+1664  write(1, "18\nw|q`kbf(w|q`kbf<q\30", 21 <unfinished ...>
+1663  read(7,  <unfinished ...>
+1664  <... write resumed>)              = 21
+1663  <... read resumed>"1\n\v18\nw|q`kbf(w|q`kbf<q\30", 1000) = 24
+1664  write(1, "26\n\23}yy:\177tyhcjn4y:7u:\177tyhcjn\20", 29 <unfinished ...>
+1663  write(4, "1\n\v18\nw|q`kbf(w|q`kbf<q\30", 24 <unfinished ...>
+1664  <... write resumed>)              = 29
+1663  <... write resumed>)              = 24
+1664  write(1, "1\n\v", 3 <unfinished ...>
+1663  read(7,  <unfinished ...>
+1664  <... write resumed>)              = 3
+1663  <... read resumed>"26\n\23}yy:\177tyhcjn4y:7u:\177tyhcjn\0201\n\v", 1000) = 32
+1664  write(1, "18\nvwq`kbf(vwq`kbf<q\30", 21 <unfinished ...>
+1663  write(4, "26\n\23}yy:\177tyhcjn4y:7u:\177tyhcjn\0201\n\v", 32 <unfinished ...>
+1664  <... write resumed>)              = 21
+1663  <... write resumed>)              = 32
+1664  write(1, "26\n\23}yy:~\177yhcjn4y:7u:~\177yhcjn\20", 29 <unfinished ...>
+1663  read(7,  <unfinished ...>
+1664  <... write resumed>)              = 29
+1663  <... read resumed>"18\nvwq`kbf(vwq`kbf<q\03026\n\23}yy:~\177y"..., 1000) = 50
+1664  write(1, "1\n\v", 3 <unfinished ...>
+1663  write(4, "18\nvwq`kbf(vwq`kbf<q\03026\n\23}yy:~\177y"..., 50 <unfinished ...>
+1664  <... write resumed>)              = 3
+1663  <... write resumed>)              = 50
+1664  write(1, "16\nu~stbf*u~stbf>s\32", 19 <unfinished ...>
+1663  read(7,  <unfinished ...>
+1664  <... write resumed>)              = 19
+1663  <... read resumed>"1\n\v16\nu~stbf*u~stbf>s\32", 1000) = 22
+1664  write(1, "24\n\21\177{{8}v{|jn6{85w8}v{|jn\22", 27 <unfinished ...>
+1663  write(4, "1\n\v16\nu~stbf*u~stbf>s\32", 22 <unfinished ...>
+1664  <... write resumed>)              = 27
+1663  <... write resumed>)              = 22
+1664  write(1, "7\ndkbfi=\r", 9 <unfinished ...>
+1663  read(7,  <unfinished ...>
+1664  <... write resumed>)              = 9
+1663  <... read resumed>"24\n\21\177{{8}v{|jn6{85w8}v{|jn\0227\ndkb"..., 1000) = 36
+1664  write(1, "30\n\27ls>3x>{p}zlh>{p}lgnj>z{}lgnj"..., 33 <unfinished ...>
+1663  write(4, "24\n\21\177{{8}v{|jn6{85w8}v{|jn\0227\ndkb"..., 36 <unfinished ...>
+1664  <... write resumed>)              = 33
+1663  <... write resumed>)              = 36
+1664  read(0,  <unfinished ...>
+1663  read(7,  <unfinished ...>
+1664  <... read resumed>"", 4096)       = 0
+1663  <... read resumed>"30\n\27ls>3x>{p}zlh>{p}lgnj>z{}lgnj"..., 1000) = 33
+1664  exit_group(0 <unfinished ...>
+1663  write(4, "30\n\27ls>3x>{p}zlh>{p}lgnj>z{}lgnj"..., 33 <unfinished ...>
+1664  <... exit_group resumed>)         = ?
+1663  <... write resumed>)              = 33
+1663  read(7, "", 1000)                 = 0
+1664  +++ exited with 0 +++
+1663  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1664, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+1663  close(4)                          = 0
+1663  close(7)                          = 0
+1663  exit_group(0)                     = ?
+1663  +++ exited with 0 +++

@@ -1,0 +1,29 @@
+Part 1
+------
+Q1. Briefly explain your implementation logic to handle wrap-around in the trace buffer.
+Ans. We read the trace buffer charcter by character incrementing the read(or write) offset each time.
+When the read(or write) offset reaches the end, set it back to the start. Once the read pointer and write pointer is equal or read/write offset equals count, we exit (we flip the buff_full in the former 
+case).
+
+
+Q2. Can a write to trace buffer return 0 even if we pass non-zero size to the system call? Why or Why not?
+Ans. Yes.
+ It is possible when the trace buffer is full therefore no more data can be written so we return zero.
+
+Q3. Explain the expected behavior of testcase9.c.  
+Ans. The expected behavior is that fd[29] must be negative because it exceeds the maximum number of files that can be made (32 max fiels of which 3 are already std_in std_out std_err). Now, fd[0] has 3 so 3 gets closed. Thus, fd2 will have file 3. 
+
+
+Part 2
+------
+Q1. In testcase13.c, what address `caddr' represent? How it is formulated in the user space?
+Ans. 'caddr' represents the address just after the second line of the main function from where the get_my_code_addr function is called.
+     when the function get_my_code_addr is called, it saves the return address then rbp then the stack of get_my_code_addr is loaded, and var is at the top of the stack. Now when we skip 16 address bits, first we skip var and then we skip rbp, thus var now points to the return address of the main function. Now, when *((u64 *)var) is returned, it returns the return address of the main function, which is 
+just after the line where get_my_code_addr is called.
+
+
+Q2. How do you explain the invocation of tb_read() and tb_write() when a read/write syscall is performed?   
+Ans. when a read/write syscall is performed then it checks for the corresponding FD in the files array of exec context, then in the file object, it access the function pointers (tb_read, tb_write) through the file_ops struct.
+
+
+

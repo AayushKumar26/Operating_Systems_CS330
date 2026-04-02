@@ -1,0 +1,5 @@
+int fd[2]
+
+pipe(fd)  <------->   syscall(SYS_pipe, fd) 
+
+**Do not forget to include sys/syscall.h**
