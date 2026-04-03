@@ -4,7 +4,7 @@ This repository contains coursework materials for the CS330 Operating Systems co
 
 ## Technology Stack
 
-This repository is primarily written in **C (92.8%)**, with components in **Assembly (3.1%)** and **Shell Scripts (2.8%)**, reflecting the systems programming nature of operating systems coursework.
+This repository is primarily written in **C**, with components in **Assembly** and **Shell Scripts**, reflecting the systems programming nature of operating systems coursework.
 
 ---
 
@@ -67,7 +67,7 @@ Memory management API implementation. Covers memory allocation, deallocation, an
 Quick reference guide for pipe system calls. Contains code snippets showing the equivalence between the `pipe()` function and the direct `syscall(SYS_pipe, fd)` approach, including necessary header files for system call programming.
 
 ### linux man pages.pdf
-Comprehensive Linux manual pages reference document (16.6 MB). Serves as a reference for all system calls, library functions, and command-line utilities used throughout the coursework.
+Comprehensive Linux manual pages reference document. Serves as a reference for all system calls, library functions, and command-line utilities used throughout the coursework.
 
 ---
 
