@@ -1,4 +1,4 @@
-# CS330 Operating Systems Coursework Collection
+# Operating Systems
 
 This repository serves as a collection of coursework materials for the CS330 Operating Systems course. It includes various labs and projects that explore fundamental concepts in operating systems.
 
