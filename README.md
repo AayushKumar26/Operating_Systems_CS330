@@ -51,13 +51,13 @@ Comprehensive systems project integrating multiple OS concepts learned throughou
 Implementation of file I/O operations and file handling abstractions. Provides practical experience with system calls related to file operations, including open, read, write, close, and seek operations.
 
 ### execshell/
-Shell implementation project focusing on process execution and command interpretation. Students build a minimal shell that can parse and execute system commands, demonstrating understanding of process creation and management.
+Shell implementation project focusing on process execution and command interpretation. Built a minimal shell that can parse and execute system commands, demonstrating understanding of process creation and management.
 
 ### gemOS/
 Custom operating system kernel implementation project. This is an advanced module where students implement core OS functionality including process management, scheduling, memory management, and interrupt handling.
 
 ### memapi/
-Memory management API implementation. Covers memory allocation, deallocation, and various memory management strategies. Students work with heap management and memory allocation algorithms.
+Memory management API implementation. Covers memory allocation, deallocation, and various memory management strategies. Worked with heap management and memory allocation algorithms.
 
 ---
 
@@ -106,8 +106,6 @@ Operating_Systems_CS330/
 
 ## Learning Outcomes
 
-Upon completing this coursework, students will have:
-
 - Gained deep understanding of operating systems architecture and design
 - Implemented core OS components from scratch
 - Mastered low-level systems programming in C and Assembly
@@ -122,5 +120,5 @@ Upon completing this coursework, students will have:
 
 - Labs 3, 8, and 10 were examination-based assessments and their content is not included in this public repository.
 - All code examples follow Linux/POSIX standards and practices.
-- Students are encouraged to review the Linux man pages PDF for detailed system call documentation.
+- Users are encouraged to review the Linux man pages PDF for detailed system call documentation.
 - Each lab directory contains submission folders with completed assignments and reference implementations.
